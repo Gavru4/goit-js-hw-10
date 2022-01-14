@@ -1,14 +1,16 @@
-// export default function fetchMovie(query) {
-//   const KEY = 'b2c3269bd358b01baf914c84972bca6a';
-//   const BASE_URL = 'https://api.themoviedb.org/3/search/movie?';
-//   return fetch(
-//     `${BASE_URL}api_key=${KEY}&language=en-US&page=1&include_adult=false&query=${query}`,
-//   ).then(response => response.json());
-// }
-const name = "usa"
+
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 export default function fetchCountries(name) {
-  const KEY = '';
-    const BASE_URL = 'https://restcountries.com/v3.1/name/';
-    
-    return fetch(`${BASE_URL} ${name}`).then(response => response.json());
+  const BASE_URL = 'https://restcountries.com/v3.1/name/';
+  return fetch(`${BASE_URL} ${name}?fields=name,capital,currencies,population,flags,languages`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error( response.status);
+      }
+      return response.json();
+    })
+    // .catch(error => {
+    //   Notify.failure("Oops, there is no country with that name");
+    // })
 }
