@@ -64,7 +64,7 @@ function renderCountryInfo(data) {
                 <img src="${flags.svg}" alt="img" width="100">
                 <h1>${name.common}</h1></div>
             <ul class="country-description">
-                <li class="contry-list">
+                <li class="contry-info">
                     <p><b>Capital:</b>${capital}</p>
                     <p><b>Population:</b>${population}</p>
                     <p><b>Languages:</b>${Object.values(languages).join(',')}</p>

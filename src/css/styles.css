@@ -25,12 +25,18 @@ ul {
 }
 .wrapper {
   display: flex;
+  padding-left: 10px;
 }
 .wrapper > img {
   margin-right: 10px;
 }
 .contry-list {
   font-size: 26px;
+  display: flex;
+  padding-left: 10px;
+}
+.contry-list > img {
+  margin-right: 10px;
 }
 
 .counry-item {
@@ -38,5 +44,8 @@ ul {
   align-items: center;
 }
 .country-description {
-  padding-left: 0;
+  padding-left: 10px;
+}
+.contry-info {
+  font-size: 26px;
 }
