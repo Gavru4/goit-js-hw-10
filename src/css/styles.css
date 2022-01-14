@@ -18,12 +18,25 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
 ul {
   list-style-type: none;
+  margin: 0;
 }
-.contry-list {
+.wrapper {
   display: flex;
 }
-.country-name {
+.wrapper > img {
+  margin-right: 10px;
+}
+.contry-list {
   font-size: 26px;
+}
+
+.counry-item {
+  display: flex;
+  align-items: center;
+}
+.country-description {
+  padding-left: 0;
 }
